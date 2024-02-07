@@ -1,0 +1,41 @@
+﻿@page "/chartcomponent"
+@rendermode InteractiveAuto
+<!-- ChartComponent.razor -->
+
+<h3>Gráfico Interactivo</h3>
+
+<Chart Data="@datos" Tipo="@tipoDeGrafico" Anotaciones="@anotaciones" />
+
+@code {
+    private List<Dato> datos = ObtenerDatos();
+    private string tipoDeGrafico = "line";
+    private List<Anotacion> anotaciones = ObtenerAnotaciones();
+
+    private List<Dato> ObtenerDatos()
+    {
+        // Lógica para obtener datos estadísticos
+        // ...
+
+        return new List<Dato>();
+    }
+
+    private List<Anotacion> ObtenerAnotaciones()
+    {
+        // Lógica para obtener anotaciones relevantes
+        // ...
+
+        return new List<Anotacion>();
+    }
+
+    private class Dato
+    {
+        public DateTime Fecha { get; set; }
+        public double Valor { get; set; }
+    }
+
+    private class Anotacion
+    {
+        public DateTime Fecha { get; set; }
+        public string Texto { get; set; }
+    }
+}

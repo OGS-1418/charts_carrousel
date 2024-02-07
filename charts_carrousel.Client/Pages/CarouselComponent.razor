@@ -1,0 +1,25 @@
+﻿@page "/carouselcomponent"
+@rendermode InteractiveAuto
+<!-- CarouselComponent.razor -->
+
+<h3>Carrusel de Imágenes</h3>
+
+<Carrusel Imagenes="@imagenes" AutoDesplazamiento="true" VelocidadDesplazamiento="5000" />
+
+@code {
+    private List<string> imagenes = ObtenerImagenes();
+
+    private List<string> ObtenerImagenes()
+    {
+        // Lógica para obtener la lista de imágenes
+        // ...
+
+        return new List<string>
+        {
+            "imagen1.jpg",
+            "imagen2.jpg",
+            "imagen3.jpg",
+            // ...
+        };
+    }
+}
